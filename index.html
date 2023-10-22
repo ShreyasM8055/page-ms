@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Assign - Login</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Google Fonts for Lato font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta name="google-signin-client_id" content="1065806393030-5l9rb4o7n2q8iobr13qav76em98rkl75.apps.googleusercontent.com">       
+</head>
+<body>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        function onSignIn(googleUser) {
+            var id_token = googleUser.getAuthResponse().id_token;
+        
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://127.0.0.1:5501');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function () {
+                console.log('Signed in as: ' + xhr.responseText);
+            };
+            xhr.send('idtoken=' + id_token);
+        }
+        </script>         
+    <main>
+        <div class="login-container">
+            <video autoplay loop muted playes-inline class="back-video">
+                <source src="images/MY.mp4" type="video/mp4">
+            </video>
+            <h2>LOGIN TO MS TECH SOL.</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <!-- Use placeholders for username and password -->
+                    <div class="input-with-icon">
+                        <input type="text" id="username" name="username" placeholder="Username" required>
+                        <ion-icon name="person-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-with-icon">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="rememberMe">Remember Me</label>
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                </div>
+                <button type="submit">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    Login
+                </button>
+                <div class="form-links">
+                    <a href="#">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        Don't have an account? Sign Up
+                    </a> |
+                    <a href="#">forgot assword</a>
+                </div>
+                                <!-- Add elements for displaying email and name -->
+                <p id="user-email"></p>
+                <p id="user-name"></p>
+        
+                <form id="login-form">
+                    <!-- Your login form as it is -->
+                </form>
+                    <button type="button" id="google-signin" class="transparent-button">
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                        <!-- Your Google Sign-In button content here -->
+                    </button>
+                    <div class="data>"
+                        
+                    
+                </div>
+                </form>
+        </div>
+    </main>
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

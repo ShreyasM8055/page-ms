@@ -1,0 +1,190 @@
+/* CSS styles for the login page */
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url('myyyy.jpg'); /* Replace with your image path */
+    background-size: cover; /* Make the background image cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent repeating */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Set height to 100% of viewport height */
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.5); /* Make the container background transparent */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Change glow color to white */
+    width: 350px; /* Increase the container width */
+    margin: 200px auto;
+    padding: 20px;
+    position: relative; /* Change to relative positioning */
+    left: 200px; /* Add margin to the left to move it right */
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Change glow color to white */
+    animation: glow 2s infinite alternate; /* Add the glowing effect */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Change glow color to white */
+    }
+    100% {
+        box-shadow: 0 0 40px rgb(0, 0, 0); /* Increase the glow effect */
+    }
+}
+
+h2 {
+    color: #090000; /* Change the color to white */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Rest of your CSS styles remain unchanged */
+
+/* Style for the input boxes */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+ion-icon {
+    font-size: 20px;
+    margin-left: 10px; /* Adjust margin to place the icons on the right */
+    color: #000000;
+}
+
+input[type="text"],
+input[type="password"] {
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+    color: #000000; /* Change text color to white */
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #000000;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #000000;
+    transition: color 0.3s;
+}
+
+input[type="text"]:focus::placeholder,
+input[type="password"]:focus::placeholder {
+    color: transparent;
+}
+
+/* Style for the Remember Me and Forgot Password links */
+.form-links {
+    font-size: 14px;
+    color: #000000; /* Change the color to white */
+    margin-top: 10px;
+}
+
+.form-links a {
+    text-decoration: none;
+    color: #000000; /* Change the color to white */
+    transition: color 0.3s;
+}
+
+.form-links a:hover {
+    color: #333;
+}
+
+/* Style for the Login button */
+button[type="submit"] {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 28px; /* Increase the font size */
+    color: #000000;
+    background-color: transparent; /* Change background color to transparent */
+    border: none; /* Remove border */
+    border-radius: 0; /* Remove border radius */
+    padding: 20px 40px; /* Increase padding for a larger button */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    margin-top: 20px; /* Add margin for spacing */
+    display: block; /* Make the button a block element */
+}
+
+button[type="submit"]:hover {
+    background-color: transparent; /* Change background color to transparent */
+    color: #333;
+}
+.back-video {
+    position: fixed; /* Change to fixed for a background video */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover; /* Ensures the video covers the entire element */
+  }
+  .transparent-button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    padding: 10;
+    top: 20px;
+
+    
+    /* Add any other styles you need */
+}
+/* CSS for styling the navigation menu and buttons */
+/* CSS for styling the menu and hamburger icon */
+/* CSS for styling the menu and hamburger icon */
+/* CSS for styling the menu and hamburger icon */
+.menu {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu-links {
+    display: none;
+}
+
+/* CSS for displaying menu links when menu is toggled */
+.menu-links.active {
+    display: block;
+}
